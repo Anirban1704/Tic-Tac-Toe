@@ -1,0 +1,7 @@
+# Dependencies
+node_modules/
+pnpm-lock.yaml
+
+# Build & Config files
+src/vite-env.d.ts
+vite.config.js
