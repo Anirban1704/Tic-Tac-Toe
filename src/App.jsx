@@ -1,6 +1,7 @@
 import React from "react";
 
 import Player from "./components/Player.jsx";
+import GameBoard from "./components/GameBoard.jsx";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
 
           <Player name="Player 2" symbol="O" />
         </ol>
+        <GameBoard />
       </div>
     </main>
   );
