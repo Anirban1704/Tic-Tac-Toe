@@ -7,16 +7,17 @@ const initialGameBoard = [
   [null, null, null],
 ];
 
-export default function GameBoard() {
+export default function GameBoard(props) {
   const [gameBoard, setGameBoard] = useState(initialGameBoard);
   function handleSelectSquare(rowIndex, colIndex) {
     setGameBoard((prevGameBoard) => {
       const copyGameBoard = [
         ...prevGameBoard.map((innerArray) => [...innerArray]),
       ];
-      copyGameBoard[rowIndex][colIndex] = "X";
+      copyGameBoard[rowIndex][colIndex] = props.activePlayerSymbol;
       return copyGameBoard;
     });
+    props.changeActivePlayer();
   }
 
   return (
